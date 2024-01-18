@@ -1,0 +1,6 @@
+node_modules/
+nightwatch/
+logs/
+.astro/
+tests_output/
+package-lock.json
