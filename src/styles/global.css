@@ -18,3 +18,7 @@ p {
 .text-center {
     text-align: center !important;
 }
+
+.bottom {
+    margin-bottom: 10% !important;
+}
