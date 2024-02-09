@@ -19,6 +19,7 @@
     "@astrojs/tailwind": "^5.0.3",
     "@openstatus/react": "^0.0.3",
     "astro": "^4.3.5",
+    "axios": "^1.6.7",
     "daisyui": "^4.4.10",
     "dayjs": "^1.11.9",
     "shadcn-ui": "^0.8.0",
