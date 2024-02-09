@@ -4,6 +4,7 @@ import HorizontalCard from "../../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../../lib/createSlug";
 import axios from 'axios';
+import { CCard, CCardBody, CCol, CCardHeader, CRow } from '@coreui/react';
 
 interface GeoData {
     state: string;
@@ -55,28 +56,28 @@ const data = await response.json();
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-<div class="card w-100 bg-base-100 shadow-xl">
-  <figure><img src="/pingmap.png" /></figure>
-  <div class="card-body">
-    <h2 class="card-title">{data['geoRegion']} Internet Exposure</h2>
-   <div class="stats stats-vertical lg:stats-horizontal shadow">
-    <div class="stat">
-      <div class="stat-title">Databases</div>
-      <div class="stat-value">{data['numCompromisedDB']}</div>
-    </div>
-    <div class="stat">
-      <div class="stat-title">ICS</div>
-      <div class="stat-value">{data['numIcs']}</div>
-    </div>
+     <div class="card w-100 bg-base-100 shadow-xl">
+        <figure><img src="/pingmap.png" /></figure>
+        <div class="card-body">
+          <h2 class="card-title">{data['geoRegion']} Internet Exposure</h2>
+         <div class="stats stats-vertical lg:stats-horizontal shadow">
+          <div class="stat">
+            <div class="stat-title">Databases</div>
+            <div class="stat-value">{data['numCompromisedDB']}</div>
+          </div>
+          <div class="stat">
+            <div class="stat-title">ICS</div>
+            <div class="stat-value">{data['numIcs']}</div>
+          </div>
 
-    <div class="stat">
-      <div class="stat-title">Ports</div>
-      <div class="stat-value">{data['numPorts']}</div>
-    </div>
-    <div class="stat">
-      <div class="stat-title">Open Webcams</div>
-      <div class="stat-value">{data['numOpenWebcams']}</div>
-    </div>
+          <div class="stat">
+            <div class="stat-title">Ports</div>
+            <div class="stat-value">{data['numPorts']}</div>
+          </div>
+          <div class="stat">
+            <div class="stat-title">Open Webcams</div>
+            <div class="stat-value">{data['numOpenWebcams']}</div>
+          </div>
   </div>
 </div>
 

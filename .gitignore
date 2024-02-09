@@ -1,7 +1,7 @@
 node_modules/
+dist/
 nightwatch/
 logs/
 .astro/
 tests_output/
 package-lock.json
-dist/
