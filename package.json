@@ -12,17 +12,18 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.5.1",
     "@astrojs/mdx": "^2.0.3",
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.1",
     "@astrojs/tailwind": "^5.0.3",
+    "@openstatus/react": "^0.0.3",
+    "astro": "^4.3.5",
     "daisyui": "^4.4.10",
     "dayjs": "^1.11.9",
+    "shadcn-ui": "^0.8.0",
     "sharp": "^0.32.6",
-    "tailwindcss": "^3.3.5",
-    "@astrojs/check": "^0.5.1",
-    "@openstatus/react": "^0.0.3",
-    "astro": "^4.3.5"
+    "tailwindcss": "^3.3.5"
   },
   "devDependencies": {
     "@nightwatch/react": "^3.1.0",
