@@ -8,6 +8,16 @@ tags: ["education", "resources"]
 
 ## Cyber Citizens without Borders
 
+#### Operational Security
+
+### 1) Test your DNS for leaks:
+- [Test your IPv6 DNS](https://test-ipv6.com/)
+- [DNS Leak Test](https://www.dnsleaktest.com/)
+
+### 2) Update your DNS:
+- [Quad9](https://quad9.net/)
+- [Cloudflare](https://www.cloudflare.com/application-services/products/dns/)
+
 #### Reading List
 - **The Sovereign Individual**, James Dale Davidson, Lord William Rees-Mogg.
 - **The Fourth Turning Is Here**, Neil Howe.

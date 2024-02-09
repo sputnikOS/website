@@ -4,3 +4,4 @@ logs/
 .astro/
 tests_output/
 package-lock.json
+dist/
