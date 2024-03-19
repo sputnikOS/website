@@ -56,6 +56,7 @@ const data = await response.json();
 ---
 
 <BaseLayout sideBarActiveItemID="home">
+    
      <div class="card w-100 bg-base-100 shadow-xl">
         <figure><img src="/pingmap.png" /></figure>
         <div class="card-body">
@@ -63,20 +64,20 @@ const data = await response.json();
          <div class="stats stats-vertical lg:stats-horizontal shadow">
           <div class="stat">
             <div class="stat-title">Databases</div>
-            <div class="stat-value">{data['numCompromisedDB']}</div>
+            <div class="stat-value">{data['numCompromisedDB'].toLocaleString() }</div>
           </div>
           <div class="stat">
             <div class="stat-title">ICS</div>
-            <div class="stat-value">{data['numIcs']}</div>
+            <div class="stat-value">{data['numIcs'].toLocaleString() }</div>
           </div>
 
           <div class="stat">
             <div class="stat-title">Ports</div>
-            <div class="stat-value">{data['numPorts']}</div>
+            <div class="stat-value">{data['numPorts'].toLocaleString() }</div>
           </div>
           <div class="stat">
             <div class="stat-title">Open Webcams</div>
-            <div class="stat-value">{data['numOpenWebcams']}</div>
+            <div class="stat-value">{data['numOpenWebcams'].toLocaleString() }</div>
           </div>
   </div>
 </div>
