@@ -63,11 +63,11 @@ const data = await response.json();
           <h2 class="card-title">{data['geoRegion']} Internet Exposure</h2>
          <div class="stats stats-vertical lg:stats-horizontal shadow">
           <div class="stat">
-            <div class="stat-title">Databases</div>
+            <div class="stat-title">Compromised Databases</div>
             <div class="stat-value">{data['numCompromisedDB'].toLocaleString() }</div>
           </div>
           <div class="stat">
-            <div class="stat-title">ICS</div>
+            <div class="stat-title">Industrial Control Systems</div>
             <div class="stat-value">{data['numIcs'].toLocaleString() }</div>
           </div>
 
@@ -79,8 +79,13 @@ const data = await response.json();
             <div class="stat-title">Open Webcams</div>
             <div class="stat-value">{data['numOpenWebcams'].toLocaleString() }</div>
           </div>
-  </div>
-</div>
+		  <div class="stat">
+            <div class="stat-title">Top Vulnerability</div>
+            <div class="stat-value">{data['vuln'].toLocaleString() }</div>
+          </div>
+	  </div>
+
+	</div>
 
 
 
