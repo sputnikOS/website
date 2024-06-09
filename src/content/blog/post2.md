@@ -8,6 +8,7 @@ tags: ["education", "resources"]
 
 ## Cyber Citizen's Guide to Self-Rescue
 
+#### [Our Online Library](https://github.com/projekt-sputnik/library.git)
 #### Reading List
 - **The Sovereign Individual**, James Dale Davidson, Lord William Rees-Mogg.
 - **The Fourth Turning Is Here**, Neil Howe.
@@ -34,6 +35,7 @@ tags: ["education", "resources"]
 [ExploitDB](https://www.exploit-db.com/)
 [VulnHub](https://www.vulnhub.com/)
 [Pentest Tools](https://pentest-tools.com/)
+[AtomiCorp]
 
 #### Activism and Education
 [EFF](https://www.eff.org)
