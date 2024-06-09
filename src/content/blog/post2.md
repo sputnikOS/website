@@ -1,7 +1,7 @@
 ---
-title: "Cyber Citizens without Borders"
-description: "A growing list of resources for the cyber citizen"
-pubDate: "January 24, 2024"
+title: "Cyber Self-Reliance"
+description: "A list of resources for being self-reliant."
+pubDate: "April 24, 2024"
 heroImage: "/terminal2.jpeg"
 tags: ["education", "resources"]
 ---

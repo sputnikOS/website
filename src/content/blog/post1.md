@@ -1,9 +1,9 @@
 ---
-title: "Whitepaper"
-description: "Secure and Open Source Software Ecosystem"
-pubDate: "Sep 10 2022"
+title: "Whitepaper: Linux Template"
+description: "A template for an Open-Source Linux architecture."
+pubDate: "March 31, 2024"
 heroImage: "/terminal.jpeg"
-tags: ["linux"]
+tags: ["tools"]
 ---
 
 **White Paper: Open Source Linux Distribution with Integrated AI, IoT, and Decentralized Blockchain**
