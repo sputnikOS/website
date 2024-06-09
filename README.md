@@ -1,4 +1,4 @@
-=======================================================================
+==================================================================================
 
 ####    #    #### ##### #   # ##### #   # #   # #   #      ###   ####
 #   #  # #  #     #   #  # #    #   #   # #  ## #  #      #   # #
@@ -6,16 +6,23 @@
 #     #   # #     #   #  #      #   #   # ##  # #  #      #   # #
 #     #   #  #### #   # #       #   #   # #   # #   #      ###   ####
 
-======================================================================
-Projekt Rasputnik App
-v0.0.1
+=================================================================================
+### Sputnik
+v0.0.2
+=================================================================================
 
-```
-npm install
-astro dev
-astro build
-```
-=======================================================================
+### 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build production app to `./public/`              |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `nightwatch`              | Run Nightwatch unit tests                        |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
                                         _____
                                   _.--""     ""--._

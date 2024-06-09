@@ -6,3 +6,4 @@ logs/
 tests_output/
 package-lock.json
 public/
+.vs/

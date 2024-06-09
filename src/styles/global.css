@@ -22,3 +22,8 @@ p {
 .bottom {
     margin-bottom: 10% !important;
 }
+
+.padding {
+    padding-left: 10%;
+    padding-right: 10%;
+}
