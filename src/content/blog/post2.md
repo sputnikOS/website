@@ -6,7 +6,7 @@ heroImage: "/terminal2.jpeg"
 tags: ["education", "resources"]
 ---
 
-## Cyber Citizens without Borders
+## Cyber Citizen's Guide to Self-Rescue
 
 #### Reading List
 - **The Sovereign Individual**, James Dale Davidson, Lord William Rees-Mogg.
@@ -23,12 +23,21 @@ tags: ["education", "resources"]
 - **Principles for Dealing with the Changing World Order**, Ray Dalio.
 - **Proof of Stake: The Making of Ethereum and the Philosophy of Blockchains**, Vitaric Buterin, Nathan Schneidor.
 
-#### Activism
-- [Electronic Frontier Foundation](https://www.eff.org)
-- [Wikileaks](https://www.wikileaks.org)
-- [The Linux Foundation](https://wwww.linuxfoundation.org)
+#### Virtual Machines & Docker
+[LinuxServer.io](https://www.linuxserver.io)
+[Kali Linux](https://www.kali.org/get-kali/#kali-platforms)
 
-#### Docker Containers
-- [Linux Server](https://www.linuxserver.io)
-#### Education
-[Open Source Software University](https://www.ossu.firebaseapp.com)
+#### Web Tools & Services
+[Shodan](https://www.shodan.io)
+[OSINT Framework](https://osintframework.com/)
+[HaveIBeenPwned](https://haveibeenpwned.com/)
+[ExploitDB](https://www.exploit-db.com/)
+[VulnHub](https://www.vulnhub.com/)
+[Pentest Tools](https://pentest-tools.com/)
+
+#### Activism and Education
+[EFF](https://www.eff.org)
+[Wikileaks](https://www.wikileaks.org)
+[The Linux Foundation](https://linuxfoundation.org)
+#### Courses and Resources 
+[CIS 5930 Offensive Network Security Spring 2017](https://www.cs.fsu.edu/~liux/courses/offensivenetsec/index.html)

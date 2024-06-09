@@ -1,8 +1,8 @@
 ---
 title: "SANS FOR578: The Cycle of Cyber Threat Intelligence"
-description: "A summary of The Cycle of Cyber Threat Intelligence course."
+description: "A writeup of The Cycle of Cyber Threat Intelligence webinar."
 pubDate: "June 8, 2024"
-heroImage: "/ai-1.jpeg"
+heroImage: "/probe1.jpeg"
 tags: ["education", "resources"]
 ---
 
@@ -12,6 +12,7 @@ tags: ["education", "resources"]
 
 [Course Video](https://www.youtube.com/watch?v=J7e74QLVxCk&t=1130s&pp=ygUdc2FucyBjeWJlcnRocmVhdCBpbnRlbGxpZ2VuY2U%3D)
 [SANS Course](https://sans.org/for578)
+
 ### Intelligence
 Intelligence is the collecting and processing of information about a competitive entity and its agents, needed by an organization or group for its security and well-being. Intelligence is both a product and a process.
 
