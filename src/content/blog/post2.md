@@ -3,7 +3,7 @@ title: "Cyber Self-Reliance"
 description: "A list of resources for being self-reliant."
 pubDate: "April 24, 2024"
 heroImage: "/terminal2.jpeg"
-tags: ["education", "resources"]
+tags: ["tools", "resources"]
 ---
 
 ## Cyber Citizen's Guide to Self-Rescue
