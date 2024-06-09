@@ -16,6 +16,7 @@
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.1",
     "@astrojs/tailwind": "^5.0.3",
+    "@openstatus/react": "^0.0.3",
     "astro": "^4.0.2",
     "daisyui": "^4.4.10",
     "dayjs": "^1.11.9",
@@ -23,8 +24,9 @@
     "tailwindcss": "^3.3.5"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.10",
     "@nightwatch/react": "^3.1.0",
-    "nightwatch": "^3.3.8"
+    "@tailwindcss/typography": "^0.5.10",
+    "nightwatch": "^3.3.8",
+    "typescript": "^5.4.5"
   }
 }

@@ -3,7 +3,7 @@ title: "Whitepaper: Linux Template"
 description: "A template for an Open-Source Linux architecture."
 pubDate: "March 31, 2024"
 heroImage: "/terminal.jpeg"
-tags: ["research"]["linux"]
+tags: ["research, linux"]
 ---
 
 **White Paper: Open Source Linux Distribution with Integrated AI, IoT, and Decentralized Blockchain**

@@ -3,6 +3,8 @@ dist/
 nightwatch/
 logs/
 .astro/
-tests_output/
+.tests_output/
 package-lock.json
 .vs/
+node_modules/
+tests_output/
