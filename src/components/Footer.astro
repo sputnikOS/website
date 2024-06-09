@@ -1,5 +1,8 @@
 ---
 const today = new Date();
+
+const res = await fetch('https://api.openstatus.dev/public/status/space-agency');
+const data = await res.json();
 ---
 
 <footer class="footer footer-center block mb-5 pt-10">
@@ -9,7 +12,9 @@ const today = new Date();
   <div class="inline opacity-75">
     Developed by <a href="https://github.com/prometheus1987/" target="_blank" class="font-bold">Stephen Sabsowitz</a>
     <br/>
-     <a href="https://space-agency.openstatus.dev/" target="_blank" class="font-bold">OpenStatus</a>
-  </div>
+    </div>
+    <div class="inline opacity-100">
+     <a href="https://space-agency.openstatus.dev/" target="_blank" class="font-bold">{data['status']}</a>
+    </div>
 </footer>
 <style></style>
