@@ -2,7 +2,7 @@
 title: "Cyber Citizens without Borders"
 description: "A growing list of resources for the cyber citizen"
 pubDate: "January 24, 2024"
-heroImage: "/pingmap.png"
+heroImage: "/terminal2.jpeg"
 tags: ["education", "resources"]
 ---
 

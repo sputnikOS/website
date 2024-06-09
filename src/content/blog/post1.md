@@ -2,7 +2,7 @@
 title: "Whitepaper"
 description: "Secure and Open Source Software Ecosystem"
 pubDate: "Sep 10 2022"
-heroImage: "/laika.png"
+heroImage: "/terminal.jpeg"
 tags: ["linux"]
 ---
 
