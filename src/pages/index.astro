@@ -7,63 +7,48 @@ import createSlug from "../lib/createSlug"
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const last_posts = posts.slice(0, 3);
 
-const response = await fetch('https://shodan.nyc3.digitaloceanspaces.com/exposure-data/US.json');
-const data = await response.json();
-
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-    
-     <div class="card w-100 bg-base-100 shadow-xl">
-        <figure><img src="/pingmap.png" /></figure>
-        <div class="card-body">
-          <h2 class="card-title">{data['geoRegion']} Internet Exposure</h2>
-         <div class="stats stats-vertical lg:stats-horizontal shadow">
-          <div class="stat">
-            <div class="stat-title">Compromised Databases</div>
-            <div class="stat-value">{data['numCompromisedDB'].toLocaleString() }</div>
-          </div>
-          <div class="stat">
-            <div class="stat-title">Industrial Control Systems</div>
-            <div class="stat-value">{data['numIcs'].toLocaleString() }</div>
-          </div>
-
-          <div class="stat">
-            <div class="stat-title">Open Ports</div>
-            <div class="stat-value">{data['numPorts'].toLocaleString() }</div>
-          </div>
-          <div class="stat">
-            <div class="stat-title">Open Webcams</div>
-            <div class="stat-value">{data['numOpenWebcams'].toLocaleString() }</div>
-          </div>
-		  <div class="stat">
-            <div class="stat-title">Top Vulnerability</div>
-            <div class="stat-value">{data['vuln'].toLocaleString() }</div>
-          </div>
-	  </div>
-	</div>
-</div>
+  <div style="background: url('/probe2.jpeg')">
+     ]
+  
+    <div class="relative isolate px-6 pt-14 lg:px-8">
+      <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+        <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#11173e] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+          
+        </div>
+      </div>
+      <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+        <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+    </div>
+  </div>
+  
 
 <div class="card w-100 bg-base-100 shadow-xl">
-  <div>
-    <div class="text-2xl w-full font-bold mb-5 mt-10">Posts</div>
+  <div class="text-center">
+    <div class="text-4xl w-full font-bold mb-5 mt-10">Latest Posts</div>
+    {
+      last_posts.map((post) => (
+        <>
+          <HorizontalCard
+            title={post.data.title}
+            img={post.data.heroImage}
+            desc={post.data.description}
+            url={"/blog/" + createSlug(post.data.title, post.slug)}
+            target="_self"
+            badge={post.data.badge}
+          />
+          <div class="divider my-0" />
+        </>
+      ))
+    }
   </div>
 
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
   
 </div>
 </BaseLayout>

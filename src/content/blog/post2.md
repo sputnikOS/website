@@ -36,7 +36,6 @@ tags: ["tools", "resources"]
 [ExploitDB](https://www.exploit-db.com/)
 [VulnHub](https://www.vulnhub.com/)
 [Pentest Tools](https://pentest-tools.com/)
-[AtomiCorp]
 
 #### Activism and Education
 [EFF](https://www.eff.org)
