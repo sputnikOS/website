@@ -3,7 +3,7 @@ title: "SANS FOR578: The Cycle of Cyber Threat Intelligence"
 description: "A write-up The Cycle of Cyber Threat Intelligence webinar."
 pubDate: "June 8, 2024"
 heroImage: "/probe1.jpeg"
-tags: ["education", "cybersecurity"]
+tags: ["education", "courses", "cybersecurity"]
 ---
 
 

@@ -24,13 +24,28 @@ const storeSchema = z.object({
     heroImage: z.string().optional(),
 });
 
+const projectSchema = z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    updatedDate: z.string().optional(),
+    heroImage: z.string().optional(),
+    badge: z.string().optional(),
+    tags: z.array(z.string()).refine(items => new Set(items).size === items.length, {
+        message: 'tags must be unique',
+    }).optional(),
+});
+
 export type BlogSchema = z.infer<typeof blogSchema>;
 export type StoreSchema = z.infer<typeof storeSchema>;
+export type ProjectSchema = z.infer<typeof projectSchema>;
 
 const blogCollection = defineCollection({ schema: blogSchema });
 const storeCollection = defineCollection({ schema: storeSchema });
+const projectCollection = defineCollection({ schema: projectSchema });
 
 export const collections = {
     'blog': blogCollection,
-    'store': storeCollection
+    'store': storeCollection,
+    'project': projectCollection
 }
