@@ -1,123 +1,164 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const today = new Date();
-
-
-const response = await fetch('https://shodan.nyc3.digitaloceanspaces.com/exposure-data/US.json');
-const data = await response.json();
-
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import createSlug from "../lib/createSlug";
+import { BREACH_API, TOP_VULN_API, IP_API, STATS_API } from '../config.ts'
+;import {KEY, IP_API} from '../config.ts'
 const key = process.env.SHODAN;
 
-const getIp = await fetch('https://api.shodan.io/tools/myip?key='+key)
+
+const today = new Date();
+
+const getIp = await fetch(IP_API+key)
 const addr = await getIp.json()
 
-const getTriggers = await fetch('https://api.shodan.io/shodan/alert/triggers?key=')
-const triggers = await getTriggers.json()
 
-const latestBreach = await fetch('https://haveibeenpwned.com/api/v3/latestbreach');
+const response = await fetch(STATS_API);
+const data = await response.json();
+
+
+import { styles } from '../../src/styles/global.css'
+
+
+const latestBreach = await fetch(BREACH_API);
 const breach = await latestBreach.json();
 
-const topVuln = await fetch('https://cvedb.shodan.io/cve/CVE-2015-0204')
+const topVuln = await fetch(TOP_VULN_API)
 const vuln = await topVuln.json();
 const vulnURLs = await vuln['references'];
----
-<BaseLayout>
-            
-      
-    <div class="bottom card w-100 bg-slate-900 shadow-xl">
-      <!-- Code block starts -->
-      <div class="card-title my-6 lg:my-12 container px-6 mx-auto flex flex-col md:flex-row items-start md:items-center justify-between pb-4 border-b border-gray-300">
-        <div>
-<!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
-            <h4 class="text-2xl font-bold leading-tight text-gray-800 dark:text-gray-100">  <div class="card-title">{data['geoRegion']} Internet Exposure Stats</div></h4>
-            <h5>Your IP is {addr}</h5>
-                <li class="flex items-center mt-4 md:mt-0">
-                    <div class="mr-1">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
-                      </svg>
-                      
-                    </div>
-                    <span>Updated {today}</span>
-                </li>
-            </ul>
-        </div>
-        <div class="mt-6 md:mt-0">
-           
-        </div>
-    </div>
-    <!-- Code block ends -->
-      <div class="card-body text-center">
-      
-        <figure><img src="/pingmap.png" /></figure>
-      <div class="stats stats-vertical lg:stats-horizontal shadow text-center">
-        <div class="stat">
-          <div class="stat-title">Compromised Databases</div>
-          <div class="stat-value">{data['numCompromisedDB'].toLocaleString() }</div>
-        </div>
-        <div class="stat">
-          <div class="stat-title">Industrial Control Systems</div>
-          <div class="stat-value">{data['numIcs'].toLocaleString() }</div>
-        </div>
 
-        <div class="stat">
-          <div class="stat-title">Open Ports</div>
-          <div class="stat-value">{data['numPorts'].toLocaleString() }</div>
-        </div>
-        <div class="stat">
-          <div class="stat-title">Open Webcams</div>
-          <div class="stat-value">{data['numOpenWebcams'].toLocaleString() }</div>
-        </div>
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const last_posts = posts.slice(0, 3);
+
+---
+
+<BaseLayout sideBarActiveItemID="services">
+  
+  <div class="bottom card w-100 bg-slate-900 shadow-xl">
+    <!-- Code block starts -->
+    <div class="card-title my-6 lg:my-12 container px-6 mx-auto flex flex-col md:flex-row items-start md:items-center justify-between pb-4 border-b border-sky-600">
+     
+     <h1>Dashboard</h1>
+      <h2 class="text-2xl font-bold leading-tight text-gray-800 dark:text-gray-100">  
+        <div class="card-title">{data['geoRegion']} Internet Exposure Stats</div></h2>
+    </div>
+  <!-- Code block ends -->
+    <div class="card-body text-center">
+    
+      <figure><img src="/pingmap.png" /></figure>
+    <div class="stats stats-vertical lg:stats-horizontal shadow text-center">
+      <div class="stat">
+        <div class="stat-title">Compromised Databases</div>
+        <div class="stat-value p-text">{data['numCompromisedDB'].toLocaleString() }</div>
       </div>
-      <div class="stats stats-vertical lg:stats-horizontal shadow text-center">
-        <div class="stat">
-          <div class="stat-title">Top Vulnerability</div>
-          <div class="stat-value"><a class="btn btn-outline btn-info" onclick="my_modal_5.showModal()"> {data['vuln'].toLocaleString() }</a></div>
-        </div>
-        <div class="stat">
-          <div class="stat-title"># of Eternal Blue</div>
-          <div class="stat-value">{data['numEternalblue'].toLocaleString() }</div>
-        </div>
-        <div class="stat">
-          <div class="stat-title"># of Bluekeep</div>
-          <div class="stat-value">{data['numBluekeep'].toLocaleString() }</div>
-        </div>
-        <div class="stat">
-          <div class="stat-title"># of Pulse Secure</div>
-          <div class="stat-value">{data['numPulseSecure'].toLocaleString() }</div>
-        </div>
-        <div class="stat">
-          <div class="stat-title"># of CicsoIosXe</div>
-          <div class="stat-value">{data['numCiscoIosXe'].toLocaleString() }</div>
-        </div>
+      <div class="stat">
+        <div class="stat-title">Industrial Control Systems</div>
+        <div class="stat-value p-text">{data['numIcs'].toLocaleString() }</div>
       </div>
-  </div>
+
+      <div class="stat">
+        <div class="stat-title">Open Ports</div>
+        <div class="stat-value p-text">{data['numPorts'].toLocaleString() }</div>
+      </div>
+      <div class="stat">
+        <div class="stat-title">Open Webcams</div>
+        <div class="stat-value p-text">{data['numOpenWebcams'].toLocaleString() }</div>
+      </div>
+    </div>
+    <div class="stats stats-vertical lg:stats-horizontal shadow text-center">
+      
+    </div>
+    <div class="stats stats-vertical lg:stats-horizontal shadow text-center">
+      <div class="stat">
+        <div class="stat-title"># of Eternal Blue</div>
+        <div class="stat-value p-text">{data['numEternalblue'].toLocaleString() }</div>
+      </div>
+      <div class="stat">
+        <div class="stat-title">BlueKeep Unpatched</div>
+        <div class="stat-value p-text">{data['numBluekeep'].toLocaleString() }</div>
+      </div>
+      <div class="stat">
+        <div class="stat-title">Ivanti Pulse Secure</div>
+        <div class="stat-value p-text">{data['numPulseSecure'].toLocaleString() }</div>
+      </div>
+      <div class="stat">
+        <div class="stat-title">Cisco IOS Web UI</div>
+        <div class="stat-value p-text">{data['numCiscoIosXe'].toLocaleString() }</div>
+      </div>
+    </div>
+    <div class="stats stats-vertical lg:stats-horizontal shadow text-center">
+      <div class="stat bottom">
+        <div class="stat-title">Top Vulnerability</div>
+        <div class="stat-value p-text"><a class="btn btn-outline btn-info" onclick="vuln.showModal()"> {data['vuln'].toLocaleString() }</a></div>
+      </div>
+      <div class="stat bottom">
+        <div class="stat-title">Latest Breach</div>
+        <div class="stat-value p-text"><a class="btn btn-outline btn-info" onclick="breach.showModal()"> View</a></div>
+      </div>
+      
+    </div>
+</div>
 </div>
 
-<dialog id="my_modal_5" class="modal modal-bottom lg:modal-middle">
+<dialog id="vuln" class="modal modal-bottom lg:modal-middle">
+<div class="modal-box">
+
+  <div class="bottom text-center">
+
+    <h1 style="font-size:48px;" class="shadow-sky-50">{vuln['cve_id']}</h1>
+
+  </div>
+  <div class="divider divider-info">Severity</div>
+  <div class="rating gap-1 centered">
+    <input type="radio" name="rating-3" class="mask mask-heart bg-red-400" />
+    <input type="radio" name="rating-3" class="mask mask-heart bg-red-400" />
+    <input type="radio" name="rating-3" class="mask mask-heart bg-red-400"  />
+    <input type="radio" name="rating-3" class="mask mask-heart bg-red-400" checked />
+    <input type="radio" name="rating-3" class="mask mask-heart bg-red-400" />
+    <h2>{vuln['cvss_v2']}</h2>
+  </div>
+    <div class="bottom divider divider-info">Summary</div>
+
+
+  <p style="font-size: 18px;">{vuln['summary']}</p>
+<div class="bottom divider divider-info">Links</div>
+<div class="bottom text-center">
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2015-0204" class="btn btn-outline btn-info">Click here </a>
+</div>
+<div class="modal-action">
+  <form method="dialog">
+    <!-- if there is a button in form, it will close the modal -->
+    <button class="btn btn-outline btn-info">Close</button>
+  </form>
+</div>
+</div>
+</dialog>
+<dialog id="breach" class="modal modal-bottom lg:modal-middle">
   <div class="modal-box">
-
+    <div class="divider divider-info">Breach</div>
     <div class="bottom text-center">
-
-      <h1 style="font-size:48px;" class="shadow-sky-50">{vuln['cve_id']}</h1>
-
+  
+      <h1 style="font-size:28px;" class="shadow-sky-50">{breach['Title']}</h1>
+  
     </div>
-    <div class="divider divider-info">Severity</div>
+    <div class="divider divider-info">Breach Date</div>
+    <div class="text-center">
+
+      <h1 style="font-size:28px;" class="shadow-sky-50">{breach['BreachDate']}</h1>
+    </div>
+    <div class="divider divider-info">Pwn Count</div>
     <div class="rating gap-1 centered">
-      <input type="radio" name="rating-3" class="mask mask-heart bg-red-400" />
-      <input type="radio" name="rating-3" class="mask mask-heart bg-red-400" />
-      <input type="radio" name="rating-3" class="mask mask-heart bg-red-400"  />
-      <input type="radio" name="rating-3" class="mask mask-heart bg-red-400" checked />
-      <input type="radio" name="rating-3" class="mask mask-heart bg-red-400" />
-      <h2>{vuln['cvss_v2']}</h2>
+   
+      <h2 style="font-size: 28px; color:red;">{breach['PwnCount']}</h2>
     </div>
       <div class="bottom divider divider-info">Summary</div>
-
-
-    <p style="font-size: 18px;">{vuln['summary']}</p>
+  
+  
+    <p style="font-size: 18px;">{breach['Description']}</p>
   <div class="bottom divider divider-info">Links</div>
   <div class="bottom text-center">
-    <a href="https://nvd.nist.gov/vuln/detail/CVE-2015-0204" class="btn btn-outline btn-info">Click here </a>
+    <a href="https://troyhunt.com/telegram-combolists-and-361m-email-addresses" class="btn btn-outline btn-info">Click here </a>
   </div>
   <div class="modal-action">
     <form method="dialog">
@@ -125,8 +166,8 @@ const vulnURLs = await vuln['references'];
       <button class="btn btn-outline btn-info">Close</button>
     </form>
   </div>
-</div>
-</dialog>
+  </div>
+  </dialog>
 
-      
+  
 </BaseLayout>
