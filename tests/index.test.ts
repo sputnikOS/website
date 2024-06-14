@@ -6,7 +6,7 @@ module.exports = {
         // Replace 'http://localhost:3000' with the actual URL of your Astro app
         .url('http://localhost:4321')
         .waitForElementVisible('body', 5000)
-        .assert.title('Sputnik') // Adjust to match your app's title
+        .assert.title('(Cyber)Space Agency') // Adjust to match your app's title
         // Add additional assertions based on your app's behavior
         .end();
     },

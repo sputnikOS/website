@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 ---
 
+
 <BaseLayout title = "Projects" sideBarActiveItemID="projects">
   <div>
     <div class="text-4xl w-full font-bold mb-5 text-center">Projects </> </div>
@@ -11,30 +12,29 @@ import HorizontalCard from "../components/HorizontalCard.astro";
   <HorizontalCard
     title="Security Platform"
     img="/terminal2.jpeg"
-    desc="Security Platform."
-    url="#"
+    desc="Zero-trust & Open Source Web Application Monitoring ."
+    url="/services"
     badge="NEW"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Projekt l(AI)ka"
-    img="/laika.png"
-    desc="Zero-trust AI/ML that isn't hiding behind a corporate blackbox. Built Using PyTorch and TensorFlow."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Sputnik"
-    img="/linux.png"
-    desc="My free time is spent working on open-source audio engineering using Linux, Raspberry Pi boards and components salvaged from vintage stereo systems. I became frustrated with OSX and decided to nuke my MacBook Pro and install Debian Linux. I discovered that OSX is terrible" 
-    url="#"
-  />
-  <HorizontalCard
-    title="Internet of Things"
+    title="Software Engineering for Space"
     img="/probe.png"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
+    desc="Building the International Space Station with Open-Source Software"
+    url="/projects"
+    badge="NEW"
   />
+
+  <dialog id="dash" class="modal modal-bottom lg:modal-middle">
+    <div class="modal-box">
+    <div class="modal-action">
+      <form method="dialog">
+        
+      
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn btn-outline btn-info">Close</button>
+      </form>
+    </div>
+    </div>
+    </dialog>
 </BaseLayout>

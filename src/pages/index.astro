@@ -4,27 +4,24 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug";
 
-
-
-
-
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const last_posts = posts.slice(0, 3);
 
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="hero">
+  <div style="margin-top:2%" class="hero">
     <div class="heroContent">
         <h1 style="font-size:48px;" class="heroTitle">(Cyber)Space Agency</h1>
       <h2 class="heroSubtitle">Zero-Trust & Open-Source</h2>
       <pre>
+
       </pre>
-      <a href="/security" class="heroButton btn-outline">Security Dashboard</a>
+      <a href="/security" class="heroButton btn-outline btn-info">Security Dashboard</a>
     </div>
   </div>
   <div class="divider divider-primary "></div>
-  <div class="container bottom  ">
+  <div class="container bottom">
   
     <div class="card w-100 bg-slate-900 shadow-xl">
 

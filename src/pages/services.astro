@@ -4,7 +4,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug";
 import { BREACH_API, TOP_VULN_API, IP_API, STATS_API } from '../config.ts'
-;import {KEY, IP_API} from '../config.ts'
+// ;import {KEY, IP_API} from '../config.ts'
 const key = process.env.SHODAN;
 
 
@@ -16,9 +16,6 @@ const addr = await getIp.json()
 
 const response = await fetch(STATS_API);
 const data = await response.json();
-
-
-import { styles } from '../../src/styles/global.css'
 
 
 const latestBreach = await fetch(BREACH_API);
