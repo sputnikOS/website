@@ -3,6 +3,7 @@ title: "Penetration Testing Toolkit From Scratch"
 description: "Build your own penetration testing toolkit from scratch"
 pubDate: "June 13, 2024"
 heroImage: "/terminal.jpeg"
+badge: "Cybersecurity"
 tags: ["linux", "cybersecurity", "tools"]
 ---
 
