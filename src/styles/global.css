@@ -20,10 +20,20 @@ p {
 }
 
 .bottom {
-    margin-bottom: 10% !important;
+    margin-bottom: 5% !important;
 }
 
 .padding {
     padding-left: 10%;
     padding-right: 10%;
 }
+
+.padding-top {
+    padding-top: 5%;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
