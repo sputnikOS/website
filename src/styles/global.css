@@ -37,3 +37,7 @@ p {
     justify-content: center;
     align-items: center;
   }
+
+  .stat-title {
+    font-size:28px !important;
+  }

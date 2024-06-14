@@ -1,15 +1,19 @@
 ---
 const { sideBarActiveItemID } = Astro.props;
-const activeClass = "bg-base-300"; // For primary color replace with `active` class
+const activeClass = "bg-sky-900"; // For primary color replace with `active` class
+const textColor = "text-sky-100"
 ---
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
     <li><a class="py-3 text-base" id="home" href="/">Home</a></li>
     <li><a class="py-3 text-base" id="projects" href="/projects">Projects</a></li>
-    <li><a class="py-3 text-base" id="cv" href="/services">Services</a></li>
+    <!-- <li><a class="py-3 text-base" id="cv" href="/services">Services</a></li> -->
     <li><a class="py-3 text-base" id="services" href="/blog">Resources</a></li>
     <!-- <li><a class="py-3 text-base" id="cv" href="/store">Store</a></li> -->
-    <li><a class="py-3 text-base" id="cv" href="https://admin.madeincyberspace.com">Dashboard</a></li>
+    <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-color size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+      </svg>
+      <a class="py-3 text-base" id="cv" href="https://admin.madeincyberspace.com">Dashboard</a></li>
     <li>
         <a
             class="py-3 text-base"
