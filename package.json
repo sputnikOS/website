@@ -19,7 +19,6 @@
     "@openstatus/react": "^0.0.3",
     "astro": "^4.0.2",
     "crypto": "^1.0.1",
-    "crypto-js": "^4.2.0",
     "daisyui": "^4.4.10",
     "dayjs": "^1.11.9",
     "next-auth": "^4.23.1",
