@@ -21,7 +21,7 @@ const addr = await getIp.json()
     <br/>
     </div>
     <div class="inline opacity-100">
-     <a href="https://space-agency.openstatus.dev/" target="_blank" class="font-bold">{data['status']}</a>
+     <label>Status: </label><a href="https://space-agency.openstatus.dev/" target="_blank" class="font-bold text-green-500">{data['status']}</a>
     </div>
     <h5>Your IP is {addr}</h5>
     <span>Updated {today}</span>
