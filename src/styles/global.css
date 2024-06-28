@@ -19,6 +19,9 @@ body {
   background: url("../../public/code2.png");
 }
 
+.cluster {
+  background: url("../../public/terminal.jpeg")
+}
 p {
   font-size: 24px;
 }

@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug";
+import Projects from "./projects.astro";
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const last_posts = posts.slice(0, 3);
@@ -20,7 +21,7 @@ const last_posts = posts.slice(0, 3);
 
       </pre>
       <a href="/security" class="btn btn-outline btn-success">Dashboard</a>
-      
+    
     </div>
   </div>
   <div class="divider divider-primary "></div>
@@ -29,9 +30,9 @@ const last_posts = posts.slice(0, 3);
       <div class="mx-auto max-w-2xl sm:text-center">
         <h2 class="text-6xl font-bold tracking-tight text-sky-200 sm:text-xl">Consultation and Development</h2>
       </div>
-    <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+    <div  class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
       <div class="p-8 sm:p-10 lg:flex-auto">
-          <h3 class="text-4xl font-bold tracking-tight text-green-600">Enterprise Engineering</h3>
+          <h3 class="text-4xl font-bold tracking-tight text-green-600">Enterprise Engineering For Small Business</h3>
           <p class="mt-6 text-base leading-7 text-gray-100"></p>
           <div class="mt-10 flex items-center gap-x-4">
             <h4 class="flex-none text-lg font-semibold leading-6 text-sky-300">Services include</h4>
@@ -42,44 +43,37 @@ const last_posts = posts.slice(0, 3);
               <svg class="h-6 w-5 flex-none text-sky-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
               </svg>
-              Custom web applications with API integrations
+              Custom modular Angular/React web applications wired to any API
             </li>
             <li class="flex gap-x-3">
               <svg class="h-6 w-5 flex-none text-sky-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
               </svg>
-              Network & Application Security 
+              Web application and network monitoring with live alerts
             </li>
             <li class="flex gap-x-3">
               <svg class="h-6 w-5 flex-none text-sky-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
               </svg>
+            Open-source & Zero-Trust software development that does exactly what you need. Designed for security and built for performance Linux systems.
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-sky-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+              </svg>
+              Scalable for any architecture, from sinble-board computers to physical hardware. 
             
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="h-6 w-5 flex-none text-sky-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
-              </svg>
-    
             </li>
           </ul>
         </div>
-        <div class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-          <div class="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
-            <div class="mx-auto max-w-xs px-8">
-              <p class="text-base font-semibold text-gray-600"></p>
-              <p class="mt-6 flex items-baseline justify-center gap-x-2">
-                <span class="text-5xl font-bold tracking-tight text-gray-900">Client</span>
-                <span class="text-sm font-semibold leading-6 tracking-wide text-gray-600"></span>
-              </p>
-              <a href="#" onclick="login.showModal()" class="mt-10 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Login</a>
-              <p class="mt-6 text-xs leading-5 text-gray-600"></p>
-            </div>
+        <div style=" background: url('/public/cluster3.jpeg')" class="mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
+         
           </div>
         </div>
       </div>
     </div>
 </div>
+
   <div class="container bottom">
   
     <div class="card w-100 bg-slate-900 shadow-xl">

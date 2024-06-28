@@ -3,7 +3,7 @@
 ### Website
 ### v2.0.0
 
-
+npm install -g astro
                                         _____
                                   _.--""     ""--._
                               _.-"                 "-._

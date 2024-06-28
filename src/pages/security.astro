@@ -41,9 +41,12 @@ import terms from '../content/resources/glossary.json'
     </div>
   <!-- Code block ends -->
     <div class="card-body text-center">
-      <div id="map"></div>
+      <!-- Insert this tag where you want the widget to render -->
 
-      <figure><img src="/pingmap.png" /></figure>
+      <a onclick="map.showModal()" class="btn btn-outline btn-success">Real-time Threat Map</a>
+      
+
+   
     <div class="stats stats-vertical lg:stats-horizontal shadow text-center">
       <div class="stat">
         <div class="stat-title">Compromised Databases</div>
@@ -205,5 +208,15 @@ import terms from '../content/resources/glossary.json'
     </div>
     </dialog>
   
-
+<dialog id="map">
+  <iframe width="600" height="400" src="https://cybermap.kaspersky.com/en/widget/dynamic/dark" frameborder="0"></iframe>
+   
+  <div class="modal-action">
+    <form method="dialog">
+      <!-- if there is a button in form, it will close the modal -->
+      <button class="btn btn-outline btn-info">Close</button>
+    </form>
+  </div>
+  </div>
+</dialog>
 </BaseLayout>
