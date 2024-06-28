@@ -11,6 +11,7 @@ tags: ["tools", "resources"]
 #### [Github Library](https://github.com/projekt-sputnik/library.git)
 
 #### Reading List
+
 - **The Sovereign Individual**, James Dale Davidson, Lord William Rees-Mogg.
 - **The Fourth Turning Is Here**, Neil Howe.
 - **Active Measures**, Thomas Rid.
@@ -26,10 +27,12 @@ tags: ["tools", "resources"]
 - **Proof of Stake: The Making of Ethereum and the Philosophy of Blockchains**, Vitaric Buterin, Nathan Schneidor.
 
 #### Virtual Machines & Docker
+
 [LinuxServer.io](https://www.linuxserver.io)
 [Kali Linux](https://www.kali.org/get-kali/#kali-platforms)
 
 #### Web Tools & Services
+
 [Shodan](https://www.shodan.io)
 [OSINT Framework](https://osintframework.com/)
 [HaveIBeenPwned](https://haveibeenpwned.com/)
@@ -38,8 +41,11 @@ tags: ["tools", "resources"]
 [Pentest Tools](https://pentest-tools.com/)
 
 #### Activism and Education
+
 [EFF](https://www.eff.org)
 [Wikileaks](https://www.wikileaks.org)
 [The Linux Foundation](https://linuxfoundation.org)
-#### Courses and Resources 
+
+#### Courses and Resources
+
 [CIS 5930 Offensive Network Security Spring 2017](https://www.cs.fsu.edu/~liux/courses/offensivenetsec/index.html)
