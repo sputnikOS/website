@@ -1,4 +1,4 @@
-# Website Front-end 
+# Personal Website
 ## Purpose and Future Plans: 
 - build a template for web application that can handle multiple APIs and display real-time data.
 
