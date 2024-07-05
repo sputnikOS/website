@@ -1,6 +1,7 @@
-# Website for Open-Source Cyberspace Agency 
+# Open-Source (Cyber)Space Agency 
 ## Purpose and Future Plans: 
-- Build a front-end UI that is a portal for fetching real-time data
+- Build a front-end UI dashboard that is a portal for fetching real-time data
+- Develop CyberCitizen Portal
 
     ![GitHub Created At](https://img.shields.io/github/created-at/sputnikOS/website)
     ![GitHub branch status](https://img.shields.io/github/checks-status/sputnikOS/website/main)
