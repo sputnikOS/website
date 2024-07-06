@@ -8,17 +8,20 @@ tags: ["linux", "cybersecurity", "tools"]
 ---
 
 ## Choose Docker or VMWare/VirtualBox
-
 [Docker](https://docs.docker.com/get-docker/)
-[VMWare Player Station](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html.html.html) or [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+<br>
+[VMWare Player Station](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html.html.html)
+<br>
+[VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
-## Choose a Linux Distrobution VM image
-
-- [Debian](https://www.debian.org/download)
-- [Ubuntu](https://ubuntu.com/download)
-
-## Software
-
+## Choose a Virtual Machine
+[Get Kali](https://www.kali.org/get-kali/#kali-platforms)
+[BlackArch](https://blackarch.org/downloads.html)
+[Debian](https://www.debian.org/download)
+[Ubuntu](https://ubuntu.com/download)
+[Arch](https://archlinux.org/download/)
+  
+## Cybersecurity Toolkit
 - [Metasploit](https://github.com/rapid7/metasploit-framework)
 - [Masscan](https://github.com/robertdavidgraham/masscan)
 - [Recon-ng](https://github.com/lanmaster53/recon-ng)
