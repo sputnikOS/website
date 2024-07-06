@@ -7,20 +7,22 @@ badge: "Cybersecurity"
 tags: ["linux", "cybersecurity", "tools"]
 ---
 
-## Choose Docker or VMWare/VirtualBox
-[Docker](https://docs.docker.com/get-docker/)
+## Install VMWare or VirtualBox
 <br>
-[VMWare Player Station](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html.html.html)
-<br>
-[VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+<a href="https://www.vmware.com/products/workstation-player/"><img src="https://img.shields.io/badge/VMware-231f20?style=for-the-badge&logo=VMware&logoColor=white"></a>
+<a href="https://www.virtualbox.org/wiki/Downloads"><img src="https://img.shields.io/badge/VirtualBox-21416b?style=for-the-badge&logo=VirtualBox&logoColor=white"></a>
 
 ## Choose a Virtual Machine
-[Get Kali](https://www.kali.org/get-kali/#kali-platforms)
-[BlackArch](https://blackarch.org/downloads.html)
-[Debian](https://www.debian.org/download)
-[Ubuntu](https://ubuntu.com/download)
-[Arch](https://archlinux.org/download/)
-  
+<a href="https://kali.org"><img src="https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white"></a>
+<a href="https://blackarch.org/downloads.html"><img src="https://img.shields.io/badge/BlackArch-000000?style=for-the-badge&logo=arch-linux&logoColor=white"></a>
+
+<a href="https://www.debian.org/download"><img src="https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian&logoColor=white"></a>
+<a href="https://ubuntu.com/download"><img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white"></a>
+<a href="https://archlinux.org/download/"><img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white"></a>
+
+## Metasploitable3 
+<a href="https://github.com/rapid7/metasploitable3">Metasploitable3</a>
+
 ## Cybersecurity Toolkit
 - [Metasploit](https://github.com/rapid7/metasploit-framework)
 - [Masscan](https://github.com/robertdavidgraham/masscan)
