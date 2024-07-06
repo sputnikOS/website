@@ -7,10 +7,6 @@ const key = process.env.SHODAN;
 
 const today = new Date();
 
-const getIp = await fetch(IP_API+key)
-const addr = await getIp.json()
-
-
 const response = await fetch(STATS_API);
 const data = await response.json();
 

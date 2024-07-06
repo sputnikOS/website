@@ -5,11 +5,11 @@ const key = process.env.SHODAN;
 
 const today = new Date();
 
-const res = await fetch('https://api.openstatus.dev/public/status/space-agency');
-const data = await res.json();
+// const res = await fetch('https://api.openstatus.dev/public/status/space-agency');
+// const data = await res.json();
 
-const getIp = await fetch(IP_API+key)
-const addr = await getIp.json()
+// const getIp = await fetch(IP_API+key)
+// const addr = await getIp.json()/
 ---
 
 <footer class="footer footer-center block mb-5 pt-10">
@@ -20,10 +20,10 @@ const addr = await getIp.json()
     Developed by <a href="https://github.com/projekt-sputnik/" target="_blank" class="font-bold">Stephen Sabsowitz</a>
     <br/>
     </div>
-    <div class="inline opacity-100">
+    <!-- <div class="inline opacity-100">
      <label>Status: </label><a href="https://space-agency.openstatus.dev/" target="_blank" class="font-bold text-green-500">{data['status']}</a>
-    </div>
-    <h5>Your IP is {addr}</h5>
+    </div> -->
+    <!-- <h5>Your IP is {addr}</h5> -->
     <span>Updated {today}</span>
     <li class="flex items-center mt-4 md:mt-0">
         <div class="mr-1">
