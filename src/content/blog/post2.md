@@ -11,7 +11,6 @@ tags: ["tools", "resources"]
 #### [Github Library](https://github.com/projekt-sputnik/library.git)
 
 #### Reading List
-
 - **The Sovereign Individual**, James Dale Davidson, Lord William Rees-Mogg.
 - **The Fourth Turning Is Here**, Neil Howe.
 - **Active Measures**, Thomas Rid.
@@ -27,18 +26,18 @@ tags: ["tools", "resources"]
 - **Proof of Stake: The Making of Ethereum and the Philosophy of Blockchains**, Vitaric Buterin, Nathan Schneidor.
 
 #### Virtual Machines & Docker
-
 [LinuxServer.io](https://www.linuxserver.io)
 [Kali Linux](https://www.kali.org/get-kali/#kali-platforms)
 
-#### Web Tools & Services
-
+#### Web Tools & Data
 [Shodan](https://www.shodan.io)
 [OSINT Framework](https://osintframework.com/)
 [HaveIBeenPwned](https://haveibeenpwned.com/)
 [ExploitDB](https://www.exploit-db.com/)
 [VulnHub](https://www.vulnhub.com/)
 [Pentest Tools](https://pentest-tools.com/)
+[UrlScan](https://www.urlscan.io)
+[SANS Internet Storm Center](https://isc.sans.edu)
 
 #### Activism and Education
 
