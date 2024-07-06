@@ -50,11 +50,11 @@ p {
 }
 
 .stat-title {
-  font-size: 28px !important;
+  font-size: 18px !important;
 }
 
 .p-text {
-  font-size: 22px !important;
+  font-size: 12px !important;
 }
 
 /* components/HeroSection.module.css */

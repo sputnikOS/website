@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-import { BREACH_API, TOP_VULN_API, IP_API, STATS_API, GLOSSARY_API } from '../config.ts';
+import { BREACH_API, TOP_VULN_API, IP_API, STATS_API } from '../config.ts';
 const key = process.env.SHODAN;
 
 
@@ -23,24 +23,18 @@ const vuln = await topVuln.json();
 const vulnURLs = await vuln['references'];
 
 import terms from '../content/resources/glossary.json'
-
-
-
-
 ---
 
 <BaseLayout sideBarActiveItemID="security">
   
-  <div class="bottom card w-100 bg-slate-900 shadow-xl">
+  <div class="bottom  text-center card w-100 bg-slate-900 shadow-xl">
     <!-- Code block starts -->
-    <div class="card-title my-6 lg:my-12 container px-6 mx-auto flex flex-col md:flex-row items-start md:items-center justify-between pb-4 border-b border-sky-600">
-     
-     <h1 style="font-size:48px;" class="text-sky-600">Dashboard</h1>
-      <h2 class="text-2xl font-bold leading-tight text-gray-800 dark:text-gray-100">  
-        <div class="card-title">{data['geoRegion']} Internet Exposure Stats</div></h2>
+    <div class="card-title padding-top">
+  
+      <h2 class="text-2xl font-bold leading-tight">{data['geoRegion']} Internet Exposure Stats</h2>
     </div>
   <!-- Code block ends -->
-    <div class="card-body text-center">
+    <div class="card-body">
       <!-- Insert this tag where you want the widget to render -->
 
       <a onclick="map.showModal()" class="btn btn-outline btn-success">Real-time Threat Map</a>
@@ -189,7 +183,7 @@ import terms from '../content/resources/glossary.json'
               <!-- row 1 -->
       
                 {Object.keys(terms).map((key) => (
-                  <tr key={key}>
+                  <tr>
                     <td>{terms[key].term}</td>
                     <td>{terms[key].definition}</td>
                   </tr>
