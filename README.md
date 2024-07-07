@@ -1,4 +1,4 @@
-# CyberCitizen Web UI
+# SputnikOS Front-End UI
   ![Astro](https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white)
 <img src="https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
@@ -11,5 +11,8 @@
 ![GitHub branch status](https://img.shields.io/github/checks-status/sputnikOS/website/main)
 
 ## Purpose and Future Plans: 
-- Build a front-end UI dashboard that is a portal for fetching real-time data
-- Self-paced training courses
+- Build a front-end UI dashboard that is a portal for fetching real-time data utilizing the following RESTful APIs:
+  - Shodan
+  - SANS
+  - Cloudflare 
+- Develop a self-paced cybersecurity training course from the [CyberCitizen](https://wwww.github.com/sputnikos/cyber-citizen) repo
