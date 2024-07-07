@@ -475,7 +475,10 @@
     "term": "ECHO REQUEST",
     "definition": "An echo request is an ICMP message sent to a machine to determine if it is online and how long traffic takes to get to it."
   },
-  { "term": "EGRESS FILTERING", "definition": "Filtering outbound traffic." },
+  {
+    "term": "EGRESS FILTERING",
+    "definition": "Filtering outbound traffic."
+  },
   {
     "term": "EMANATIONS ANALYSIS",
     "definition": "Gaining direct knowledge of communicated data by monitoring and resolving a signal that is emitted by a system and that contains the data but is not intended to communicate the data."
@@ -656,7 +659,10 @@
     "term": "HIJACK ATTACK",
     "definition": "A form of active wiretapping in which the attacker seizes control of a previously established communication association."
   },
-  { "term": "HONEY CLIENT", "definition": "see Honeymonkey." },
+  {
+    "term": "HONEY CLIENT",
+    "definition": "see Honeymonkey."
+  },
   {
     "term": "HONEY POT",
     "definition": "Programs that simulate one or more network services that you designate on your computer's ports. An attacker assumes you're running vulnerable services that can be used to break into the machine. A honey pot can be used to log access attempts to those ports including the attacker's keystrokes. This could give you advanced warning of a more concerted attack."
@@ -853,7 +859,10 @@
     "term": "LEAST PRIVILEGE",
     "definition": "Least Privilege is the principle of allowing users or applications the least amount of permissions necessary to perform their intended function."
   },
-  { "term": "LEGION", "definition": "Software to detect unprotected shares." },
+  {
+    "term": "LEGION",
+    "definition": "Software to detect unprotected shares."
+  },
   {
     "term": "LIGHTWEIGHT DIRECTORY ACCESS PROTOCOL (LDAP)",
     "definition": "A software protocol for enabling anyone to locate organizations, individuals, and other resources such as files and devices in a network, whether on the public Internet or on a corporate Intranet."
@@ -1038,7 +1047,10 @@
     "term": "PATCHING",
     "definition": "Patching is the process of updating software to a different version."
   },
-  { "term": "PAYLOAD", "definition": "Generatorhacktools" },
+  {
+    "term": "PAYLOAD",
+    "definition": "Generatorhacktools"
+  },
   {
     "term": "PENETRATION",
     "definition": "Gaining unauthorized logical access to sensitive data by circumventing a system's protections."
@@ -1175,7 +1187,10 @@
     "term": "PUBLIC-KEY FORWARD SECRECY (PFS)",
     "definition": "For a key agreement protocol based on asymmetric cryptography, the property that ensures that a session key derived from a set of long-term public and private keys will not be compromised if one of the private keys is compromised in the future."
   },
-  { "term": "QAZ", "definition": "A network worm." },
+  {
+    "term": "QAZ",
+    "definition": "A network worm."
+  },
   {
     "term": "RACE CONDITION",
     "definition": "A race condition exploits the small window of time between a security control being applied and when the service is used."
@@ -1660,7 +1675,10 @@
     "term": "UDP SCAN",
     "definition": "UDP scans perform scans to determine which UDP ports are open."
   },
-  { "term": "UNICAST", "definition": "Broadcasting from host to host." },
+  {
+    "term": "UNICAST",
+    "definition": "Broadcasting from host to host."
+  },
   {
     "term": "UNIFORM RESOURCE IDENTIFIER (URI)",
     "definition": "The generic term for all types of names and addresses that refer to objects on the World Wide Web."
