@@ -9,10 +9,3 @@
 <br/>
 ![GitHub Created At](https://img.shields.io/github/created-at/sputnikOS/website)
 ![GitHub branch status](https://img.shields.io/github/checks-status/sputnikOS/website/main)
-
-## Purpose and Future Plans: 
-- Build a front-end UI dashboard that is a portal for fetching real-time data utilizing the following RESTful APIs:
-  - Shodan
-  - SANS
-  - Cloudflare 
-- Develop a self-paced cybersecurity training course from the [CyberCitizen](https://wwww.github.com/sputnikos/cyber-citizen) repo
