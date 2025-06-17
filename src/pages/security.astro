@@ -162,51 +162,51 @@ import terms from '../content/glossary.json'
             </div>
         </div>
     </dialog>
-    <!--<dialog id="glossary" class="modal modal-bottom lg:modal-middle">-->
-    <!--    <div class="modal-box">-->
-    <!--        <div class="divider divider-info">Glossary</div>-->
-    <!--        <div class="bottom text-center">-->
+    <dialog id="glossary" class="modal modal-bottom lg:modal-middle">
+        <div class="modal-box">
+            <div class="divider divider-info">Glossary</div>
+            <div class="bottom text-center">
 
-    <!--            <table class="table">-->
-    <!--                &lt;!&ndash; head &ndash;&gt;-->
-    <!--                <thead>-->
-    <!--                <tr>-->
-    <!--                    <th>Term</th>-->
-    <!--                    <th>Description</th>-->
-    <!--                </tr>-->
-    <!--                </thead>-->
-    <!--                <tbody>-->
-    <!--                &lt;!&ndash; row 1 &ndash;&gt;-->
+                <table class="table">
+                    <!-- head -->
+                    <thead>
+                    <tr>
+                        <th>Term</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- row 1 -->
 
-    <!--                {Object.keys(terms).map((key) => (-->
-    <!--                        <tr>-->
-    <!--                            <td>{terms[key].term}</td>-->
-    <!--                            <td>{terms[key].definition}</td>-->
-    <!--                        </tr>-->
-    <!--                ))}-->
+                    {Object.keys(terms).map((key) => (
+                            <tr>
+                                <td>{terms[key].term}</td>
+                                <td>{terms[key].definition}</td>
+                            </tr>
+                    ))}
 
-    <!--                </tbody>-->
-    <!--            </table>-->
+                    </tbody>
+                </table>
 
 
-    <!--            <div class="modal-action">-->
-    <!--                <form method="dialog">-->
-    <!--                    &lt;!&ndash; if there is a button in form, it will close the modal &ndash;&gt;-->
-    <!--                    <button class="btn btn-outline btn-info">Close</button>-->
-    <!--                </form>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--</dialog>-->
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn btn-outline btn-info">Close</button>
+                    </form>
+                </div>
+            </div>
+    </dialog>
 
-    <!--<dialog id="map">-->
-    <!--    <iframe width="600" height="400" src="https://cybermap.kaspersky.com/en/widget/dynamic/dark" frameborder="0"></iframe>-->
+    <dialog id="map">
+        <iframe width="600" height="400" src="https://cybermap.kaspersky.com/en/widget/dynamic/dark" frameborder="0"></iframe>
 
-    <!--    <div class="modal-action">-->
-    <!--        <form method="dialog">-->
-    <!--            &lt;!&ndash; if there is a button in form, it will close the modal &ndash;&gt;-->
-    <!--            <button class="btn btn-outline btn-info">Close</button>-->
-    <!--        </form>-->
-    <!--    </div>-->
-    <!--    </div>-->
-    <!--</dialog>-->
+        <div class="modal-action">
+            <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn btn-outline btn-info">Close</button>
+            </form>
+        </div>
+        </div>
+    </dialog>
 </BaseLayout>
