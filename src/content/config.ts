@@ -16,29 +16,12 @@ const blogSchema = z.object({
       .optional(),
 });
 
-// Store schema with optional fields
-const storeSchema = z.object({
-  title: z.string(),
-  description: z.string(),
-  custom_link_label: z.string(),
-  custom_link: z.string().optional(),
-  updatedDate: z.coerce.date(),
-  pricing: z.string().optional(),
-  oldPricing: z.string().optional(),
-  badge: z.string().optional(),
-  checkoutUrl: z.string().optional(),
-  heroImage: z.string().optional(),
-});
 
 // Export inferred types for use elsewhere
 export type BlogSchema = z.infer<typeof blogSchema>;
-export type StoreSchema = z.infer<typeof storeSchema>;
-
 // Register collections with their schemas
 const blogCollection = defineCollection({ schema: blogSchema });
-const storeCollection = defineCollection({ schema: storeSchema });
 
 export const collections = {
-  blog: blogCollection,
-  store: storeCollection,
+  blog: blogCollection
 };
