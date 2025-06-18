@@ -18,7 +18,7 @@ const topVuln = await fetch(TOP_VULN_API)
 const vuln = await topVuln.json();
 const vulnURLs = await vuln['references'];
 
-import terms from '../content/glossary.json'
+import terms from '../content/cybersecurity/glossary.json'
 ---
 
 <BaseLayout sideBarActiveItemID="security">
