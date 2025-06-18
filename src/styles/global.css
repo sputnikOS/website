@@ -63,7 +63,7 @@ p {
   position: relative;
   width: 100%;
   height: 100vh; /* Full viewport height */
-  background: url("/rpi_cluster.jpeg");
+  background: url("/public/images/rpi_cluster.jpeg");
   background-size: cover;
   background-position: center;
   display: flex;
