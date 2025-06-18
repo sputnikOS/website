@@ -16,7 +16,7 @@ body {
 }
 
 .background {
-  background: url("../../public/images/4000e.PNG");
+  background: url("/public/images/code2.png") no-repeat center center fixed;
 }
 
 .cluster {
