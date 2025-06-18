@@ -1,0 +1,30 @@
+---
+
+import ImageCard from '../components/ImageCard.astro';
+
+const images = [
+{ src: '', alt: 'Photo 1' },
+{ src: '/images/photo2.jpg', alt: 'Photo 2' },
+// Add more images here
+];
+---
+
+<html>
+<head><title>Gallery</title></head>
+<body>
+<div class="gallery">
+    {images.map((img) => (
+            <ImageCard src={img.src} alt={img.alt} />
+    ))}
+</div>
+</body>
+</html>
+
+<style>
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
+</style>
