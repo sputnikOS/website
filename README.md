@@ -8,3 +8,12 @@
 
 ![GitHub Created At](https://img.shields.io/github/created-at/sputnikOS/website)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/sputnikOS/website)
+
+Install packages
+`npm install`
+
+Start application
+`astro dev`
+
+Run Tests
+`nightwatch`
