@@ -1,8 +1,8 @@
 ---
 title: "Toolkit"
-description: "A collection of tools and resources for cybersecurity professionals."
+description: ""
 pubDate: "2023-10-01"
-heroImage: "/images/toolkit.jpg"
+heroImage: "/images/pingmap.png"
 tags: ["Toolkit", "Cybersecurity", "Resources"]
 ---
 
