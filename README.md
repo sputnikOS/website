@@ -13,7 +13,10 @@ Install packages
 `npm install`
 
 Start application
-`astro dev`
+`npm run dev`
+
+Build
+`npm run build`
 
 Run Tests
 `nightwatch`
