@@ -3,6 +3,9 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "verbatimModuleSyntax": false,
     "paths": {
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"]
